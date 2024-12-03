@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* Konum ve iletişim bilgileri */
+    .contact-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .contact-info {
+      max-width: 500px;
+    }
+
+    /* Header ve Footer'ı özelleştir */
+    .w3-bar {
+      margin-bottom: 20px;
+    }
+
+    .w3-footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .w3-footer a {
+      color: #ffd966;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .w3-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Harita */
+    .map-container {
+      max-width: 600px;
+      height: 400px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body class="w3-light-blue">
+
+  <!-- Navbar -->
+  <div class="w3-bar w3-orange w3-large">
+    <a href="index.html" class="w3-bar-item w3-button">Anasayfa</a>
+    <a href="hakkinda.html" class="w3-bar-item w3-button w3-right">Hakkında</a>
+    <a href="iletisim.html" class="w3-bar-item w3-button w3-right">İletişim</a>
+  </div>
+
+  <!-- İletişim İçeriği -->
+  <div class="w3-container contact-container">
+    <div class="contact-info">
+      <h2>İletişim Bilgileri</h2>
+      <p><strong>Adres:</strong> Pamukkale Üniversitesi İİBF B BLOK</p>
+      <p><strong>Telefon:</strong> +90 555 123 4567</p>
+      <p><strong>E-posta:</strong> info@blogum.com</p>
+      <p><strong>Çalışma Saatleri:</strong> Pazartesi - Cuma, 09:00 - 18:00</p>
+    </div>
+
+    <!-- Harita -->
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.133829060392!2d29.102457726411767!3d37.740004464161295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c64cd2bfffffff%3A0x7c21102ab89254ac!2sPamukkale%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1733228061440!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="w3-footer">
+    <p>&copy; 2024 Ali Suntur. Tüm Hakları Saklıdır.</p>
+    <p>
+      <a href="hakkinda.html">Hakkında</a> |
+      <a href="iletisim.html">İletişim</a> |
+      <a href="#">Gizlilik Politikası</a>
+    </p>
+  </div>
+
+</body>
+</html>
