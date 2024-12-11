@@ -17,12 +17,20 @@
       background-color: #f7f9fc;
     }
 
-    /* Sabit Menü Çubuğu */
-    .w3-bar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+  /* Navbar ayarları */
+  .w3-bar {
+      background-color: #0077b5; /* LinkedIn mavisi */
+      margin-bottom: 20px;
     }
+
+    .w3-bar .w3-button {
+      color: #fff;
+    }
+
+    .w3-bar .w3-button:hover {
+      background-color: #005f8c; /* Daha koyu mavi */
+    }
+
 
     /* Banner Ayarları */
     .banner {
@@ -184,10 +192,11 @@
 <body class="w3-light-blue">
 
   <!-- Navbar -->
-  <div class="w3-bar w3-orange w3-large">
-    <a href="/index.html" class="w3-bar-item w3-button">Anasayfa</a>
-    <a href="/hakkinda.html" class="w3-bar-item w3-button w3-right">Hakkında</a>
-    <a href="/iletisim.html" class="w3-bar-item w3-button w3-right">İletişim</a>
+  <div class="w3-bar w3-large">
+    <a href="index.html" class="w3-bar-item w3-button">Anasayfa</a>
+    <a href="hakkinda.html" class="w3-bar-item w3-button w3-right">Hakkında</a>
+    <a href="iletisim.html" class="w3-bar-item w3-button w3-right">İletişim</a>
+    <a href="article.html" class="w3-bar-item w3-button w3-right">Makale</a>
   </div>
 
   <!-- Banner -->
