@@ -31,7 +31,6 @@
     /* İletişim içeriği */
     .contact-container {
       display: flex; /* Flexbox ile yatay olarak iki alana bölme */
-      flex-wrap: wrap; /* Mobil cihazlarda elemanları yatay olarak sıralamak için */
       justify-content: space-between; /* İçeriği yatay olarak ayır */
       padding: 30px;
       max-width: 900px;
@@ -39,13 +38,11 @@
     }
 
     .contact-info {
-      flex: 1; /* Flexbox kullanarak her iki alanın da aynı boyutta olmasını sağla */
       max-width: 450px; /* Maksimum genişlik ayarı */
       background-color: #fff; /* Beyaz arka plan */
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
-      margin-bottom: 20px; /* Mobil cihazlarda aralarındaki boşluğu ayarla */
     }
 
     .contact-info h2 {
@@ -61,12 +58,10 @@
 
     /* Harita */
     .map-container {
-      flex: 1;
       max-width: 450px;
       height: 400px;
       border-radius: 8px;
       overflow: hidden; /* İfadenin dışına taşmasını önler */
-      margin-bottom: 20px; /* Mobil cihazlarda aralarındaki boşluğu ayarla */
     }
 
     .map-container iframe {
@@ -104,11 +99,12 @@
 </head>
 <body class="w3-light-blue">
 
-  <!-- Navbar -->
-  <div class="w3-bar w3-large">
+   <!-- Navbar -->
+   <div class="w3-bar w3-large">
     <a href="index.html" class="w3-bar-item w3-button">Anasayfa</a>
     <a href="hakkinda.html" class="w3-bar-item w3-button w3-right">Hakkında</a>
     <a href="iletisim.html" class="w3-bar-item w3-button w3-right">İletişim</a>
+    <a href="article.html" class="w3-bar-item w3-button w3-right">Makale</a>
   </div>
 
   <!-- İletişim İçeriği -->
