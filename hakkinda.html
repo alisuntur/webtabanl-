@@ -6,50 +6,90 @@
   <title>Hakkında</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
+    /* Genel stil ayarları */
+    body {
+      font-family: 'Arial', sans-serif; /* Yazı tipi olarak Arial seçildi */
+      background-color: #e6f7ff; /* Daha canlı ve soft bir arka plan rengi */
+      margin: 0;
+      padding: 0;
+    }
+
     /* Portre ve metin alanı */
     .about-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 30px;
+      display: flex; /* Flexbox ile yatay ve dikey olarak hizalama */
+      justify-content: center; /* İçeriği ortala */
+      align-items: center; /* İçeriği merkezi hizala */
+      margin: 30px auto; /* Yukarıdan ve alttan boşluk ayarı */
+      max-width: 900px; /* Maksimum genişlik */
+      padding: 0 15px; /* Tarayıcı kenarlıkları için boşluk */
+      text-align: center; /* İçeriğin ortalanması */
     }
 
     .about-image {
-      border-radius: 50%;
-      margin-right: 20px;
+      border-radius: 50%; /* Yuvarlak kenar köşeleri */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+      margin-right: 20px; /* Resim ile metin arasındaki boşluk */
+      width: 200px; /* Portre resminin boyutunu ayarla */
+      height: 200px;
+      border: 4px solid #009688; /* Gri ve yeşil arası bir bordür ekleyin */
     }
 
     .about-text {
       max-width: 500px;
+      font-size: 18px; /* Metin font boyutunu ayarla */
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff; /* Beyaz arkaplan ekleyerek metni öne çıkar */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
     }
 
-    /* Header ve Footer'ı özelleştir */
+    /* Navbar ayarları */
     .w3-bar {
+      background-color: #0077b5; /* LinkedIn mavisi */
       margin-bottom: 20px;
     }
 
-    .w3-footer {
+    .w3-bar .w3-button {
+      color: #fff;
+    }
+
+    .w3-bar .w3-button:hover {
+      background-color: #005f8c; /* Daha koyu mavi */
+    }
+
+    /* Alt Bilgi */
+    .footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 20px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
     }
 
-    .w3-footer a {
+    .footer a {
       color: #ffd966;
       text-decoration: none;
       margin: 0 10px;
     }
 
-    .w3-footer a:hover {
+    .footer a:hover {
       text-decoration: underline;
+    }
+
+    .social-links img {
+      width: 30px;
+      margin: 0 10px;
     }
   </style>
 </head>
 <body class="w3-light-blue">
 
   <!-- Navbar -->
-  <div class="w3-bar w3-orange w3-large">
+  <div class="w3-bar w3-large">
     <a href="index.html" class="w3-bar-item w3-button">Anasayfa</a>
     <a href="hakkinda.html" class="w3-bar-item w3-button w3-right">Hakkında</a>
     <a href="iletisim.html" class="w3-bar-item w3-button w3-right">İletişim</a>
@@ -57,32 +97,31 @@
 
   <!-- Hakkında İçeriği -->
   <div class="w3-container about-container">
-    <div class="w3-card-4 w3-light-grey" style="width: 300px; margin-right: 1cm;">
-      <img src="./images/Ali.png" alt="Portre" class=" w3-card-1" style="width:100%;height: 100%;">
+    <div class="w3-card-4 w3-light-grey">
+      <img src="./images/Ali.png" alt="Portre" class="about-image">
     </div>
     <div class="about-text">
       <h2>Site Sahibi Hakkında</h2>
-      <p>Merhaba! Ben [Adınızı Ekleyin], Denizli'de yaşayan bir yazılım tutkunu ve bilgi paylaşmayı seven bir blog yazarıyım. Yazılım geliştirme ve sistem tasarımı üzerine edindiğim deneyimlerimi, öğrendiğim yeni teknolojileri ve projelerimde karşılaştığım zorlukları burada sizlerle paylaşıyorum.</p>
+      <p>Merhaba! Ben Ali, Denizli'de yaşayan bir yazılım tutkunu ve bilgi paylaşmayı seven bir blog yazarıyım. Yazılım geliştirme ve sistem tasarımı üzerine edindiğim deneyimlerimi, öğrendiğim yeni teknolojileri ve projelerimde karşılaştığım zorlukları burada sizlerle paylaşıyorum.</p>
       <p>
         Bilgisayar ağları, sistem analizi ve tasarımı gibi teknik konular üzerine detaylı bilgi birikimine sahibim ve özellikle yapay zeka ile otomasyon çözümlerine büyük ilgi duyuyorum. Blogumda, hem yazılım dünyasına yeni adım atanlar için rehberlik eden içerikler hem de uzmanlar için ileri düzey bilgiler bulabilirsiniz.
-        </p>
-        <p>
-        Amacım, yazılım dünyasında ihtiyaç duyulan bilgi ve kaynakları daha erişilebilir hale getirerek bu alanda kariyer hedefleyen herkese destek olmak. Paylaşımlarımda, gerçek projelerdeki deneyimlerimden ilham alarak pratik çözümler sunmaya çalışıyorum</p>
       </p>
-      </div>
+      <p>
+        Amacım, yazılım dünyasında ihtiyaç duyulan bilgi ve kaynakları daha erişilebilir hale getirerek bu alanda kariyer hedefleyen herkese destek olmak. 
+      </p>
+    </div>
   </div>
 
-  <div style="height: 350px;width:max-content;"></div>
 
-  <!-- Footer -->
-  <div class="w3-footer">
-    <p>&copy; 2024 Ali Suntur. Tüm Hakları Saklıdır.</p>
-    <p>
-      <a href="hakkinda.html">Hakkında</a> |
-      <a href="iletisim.html">İletişim</a> |
-      <a href="#">Gizlilik Politikası</a>
-    </p>
+ <!-- Footer -->
+ <div class="footer w3-padding">
+  <p>&copy; 2024 Ali Suntur. Tüm Hakları Saklıdır.</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+
+    <a href="https://www.linkedin.com/in/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"></a>
   </div>
+</div>
 
 </body>
 </html>
