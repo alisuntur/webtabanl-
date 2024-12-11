@@ -17,8 +17,8 @@
       background-color: #f7f9fc;
     }
 
-  /* Navbar ayarları */
-  .w3-bar {
+    /* Navbar ayarları */
+    .w3-bar {
       background-color: #0077b5; /* LinkedIn mavisi */
       margin-bottom: 20px;
     }
@@ -30,7 +30,6 @@
     .w3-bar .w3-button:hover {
       background-color: #005f8c; /* Daha koyu mavi */
     }
-
 
     /* Banner Ayarları */
     .banner {
@@ -119,7 +118,6 @@
       align-items: center;
       margin: 30px 0;
       gap: 20px; 
-      /* İçerik boşlukları gap özelliği ile  */
     }
 
     .diagonal-layout:nth-child(odd) {
@@ -152,13 +150,31 @@
 
     /* Mobil Görünüm Ayarları */
     @media screen and (max-width: 768px) {
+      .w3-bar {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .w3-bar-item {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .banner {
+        height: 300px;
+      }
+
       .diagonal-layout {
-        flex-direction: column !important;
+        flex-direction: column;
       }
 
       .content-image, .content-text {
         width: 100%;
         flex: unset;
+      }
+
+      .slider-controls {
+        display: none; /* Ekran genişliği 768px veya daha az olduğunda kaydırıcı düğmeleri gizlensin */
       }
     }
 
@@ -198,7 +214,6 @@
     <a href="iletisim.html" class="w3-bar-item w3-button w3-right">İletişim</a>
     <a href="article.html" class="w3-bar-item w3-button w3-right">Makale</a>
   </div>
-
   <!-- Banner -->
   <div class="banner">
     <div class="slides">

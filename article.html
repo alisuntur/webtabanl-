@@ -30,23 +30,30 @@
 
     /* Makale içeriği */
     .article-container {
-      max-width: 900px;
+      max-width: 90%;
       margin: 30px auto;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s;
+    }
+
+    .article-container:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .article-container h1 {
-      font-size: 28px;
+      font-size: 24px;
       color: #0077b5;
+      text-align: center;
     }
 
     .article-container p {
-      font-size: 18px;
+      font-size: 16px;
       color: #333;
       margin: 10px 0;
+      text-align: justify;
     }
 
     /* Footer */
@@ -54,7 +61,7 @@
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 20px 0;
+      padding: 20px 10px;
       position: relative;
       bottom: 0;
       width: 100%;
@@ -73,6 +80,49 @@
     .social-links img {
       width: 30px;
       margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .article-container {
+        max-width: 100%;
+        padding: 15px;
+      }
+
+      .article-container h1 {
+        font-size: 20px;
+      }
+
+      .article-container p {
+        font-size: 14px;
+      }
+
+      .footer {
+        padding: 10px 5px;
+      }
+
+      .social-links img {
+        width: 25px;
+        margin: 0 5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .article-container {
+        padding: 10px;
+      }
+
+      .article-container h1 {
+        font-size: 18px;
+      }
+
+      .article-container p {
+        font-size: 12px;
+      }
+
+      .social-links img {
+        width: 20px;
+        margin: 0 3px;
+      }
     }
   </style>
 </head>
@@ -113,15 +163,9 @@
     <p>Ayrıca, ağlarda veri sızıntıları ve saldırılara karşı önlemler almak için düzenli güvenlik denetimleri yapılmalıdır. Bu, ağın açıklarını bulmak ve kapatmak için kritik bir adımdır. Doğru ağ yönetimi ve güvenlik önlemleri, ağın kesintisiz ve güvenli çalışmasını sağlar, kullanıcı verilerini korur ve siber tehditlere karşı savunma sağlar.</p>
   </div>
   
-  
   <!-- Footer -->
   <div class="footer w3-padding">
     <p>&copy; 2024 Ali Suntur. Tüm Hakları Saklıdır.</p>
     <div class="social-links">
       <a href="https://www.instagram.com/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-      <a href="https://www.linkedin.com/in/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"></a>
-    </div>
-  </div>
-
-</body>
-</html>
+      <a href="https://www.linkedin.com/in/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="
