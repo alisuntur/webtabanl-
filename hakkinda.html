@@ -4,70 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hakkında</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Genel stil ayarları */
+    /* Genel Gövde Stili */
     body {
-      font-family: 'Arial', sans-serif; /* Yazı tipi olarak Arial seçildi */
-      background-color: #e6f7ff; /* Daha canlı ve soft bir arka plan rengi */
-      margin: 0;
-      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f7f9fc;
     }
 
-    /* Portre ve metin alanı */
+    /* Navbar */
+    .navbar {
+      background-color: #0077b5;
+    }
+
+    .navbar .nav-link {
+      color: white;
+    }
+
+    .navbar .nav-link:hover {
+      color: #dfe6e9;
+    }
+
+    /* Hakkında Bölümü */
     .about-container {
-      display: flex; /* Flexbox ile yatay ve dikey olarak hizalama */
-      justify-content: center; /* İçeriği ortala */
-      align-items: center; /* İçeriği merkezi hizala */
-      margin: 30px auto; /* Yukarıdan ve alttan boşluk ayarı */
-      max-width: 900px; /* Maksimum genişlik */
-      padding: 0 15px; /* Tarayıcı kenarlıkları için boşluk */
-      text-align: center; /* İçeriğin ortalanması */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 60px auto;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .about-image {
-      border-radius: 50%; /* Yuvarlak kenar köşeleri */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
-      margin-right: 20px; /* Resim ile metin arasındaki boşluk */
-      width: 200px; /* Portre resminin boyutunu ayarla */
-      height: 200px;
-      border: 4px solid #009688; /* Gri ve yeşil arası bir bordür ekleyin */
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #009688;
     }
 
     .about-text {
-      max-width: 500px;
-      font-size: 18px; /* Metin font boyutunu ayarla */
-      line-height: 1.6;
       color: #333;
-      background-color: #fff; /* Beyaz arkaplan ekleyerek metni öne çıkar */
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
     }
 
-    /* Navbar ayarları */
-    .w3-bar {
-      background-color: #0077b5; /* LinkedIn mavisi */
+    .about-text h2 {
+      font-weight: bold;
       margin-bottom: 20px;
     }
 
-    .w3-bar .w3-button {
-      color: #fff;
-    }
-
-    .w3-bar .w3-button:hover {
-      background-color: #005f8c; /* Daha koyu mavi */
-    }
-
-    /* Alt Bilgi */
+    /* Footer */
     .footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 20px 0;
-      position: relative;
-      bottom: 0;
-      width: 100%;
     }
 
     .footer a {
@@ -86,20 +82,32 @@
     }
   </style>
 </head>
-<body class="w3-light-blue">
+<body>
 
  <!-- Navbar -->
- <div class="w3-bar w3-large">
-  <a href="index.html" class="w3-bar-item w3-button">Anasayfa</a>
-  <a href="hakkinda.html" class="w3-bar-item w3-button w3-right">Hakkında</a>
-  <a href="iletisim.html" class="w3-bar-item w3-button w3-right">İletişim</a>
-  <a href="article.html" class="w3-bar-item w3-button w3-right">Makale</a>
-</div>
-  <!-- Hakkında İçeriği -->
-  <div class="w3-container about-container">
-    <div class="w3-card-4 w3-light-grey">
-      <img src="./images/Ali.png" alt="Portre" class="about-image">
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="https://th.bing.com/th/id/OIG1.6dgH.fMS14_lI8g7tY43?pid=ImgGn" alt="Logo" style="height: 50px;">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+        <li class="nav-item"><a class="nav-link" href="hakkinda.html">Hakkında</a></li>
+        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        <li class="nav-item"><a class="nav-link" href="article.html">Makale</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
+
+  <!-- Hakkında Bölümü -->
+  <div class="container about-container mt-5 pt-5">
+    <img src="./images/Ali.png" alt="Portre" class="about-image">
     <div class="about-text">
       <h2>Site Sahibi Hakkında</h2>
       <p>Merhaba! Ben Ali, Denizli'de yaşayan bir yazılım tutkunu ve bilgi paylaşmayı seven bir blog yazarıyım. Yazılım geliştirme ve sistem tasarımı üzerine edindiğim deneyimlerimi, öğrendiğim yeni teknolojileri ve projelerimde karşılaştığım zorlukları burada sizlerle paylaşıyorum.</p>
@@ -112,16 +120,16 @@
     </div>
   </div>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Ali Suntur. Tüm Hakları Saklıdır.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"></a>
+    </div>
+  </footer>
 
- <!-- Footer -->
- <div class="footer w3-padding">
-  <p>&copy; 2024 Ali Suntur. Tüm Hakları Saklıdır.</p>
-  <div class="social-links">
-    <a href="https://www.instagram.com/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-
-    <a href="https://www.linkedin.com/in/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"></a>
-  </div>
-</div>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

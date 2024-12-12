@@ -4,34 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Makale</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Genel stil ayarları */
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #e6f7ff; /* Daha canlı ve soft bir arka plan rengi */
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f7f9fc;
       margin: 0;
       padding: 0;
     }
 
-    /* Navbar ayarları */
-    .w3-bar {
-      background-color: #0077b5; /* LinkedIn mavisi */
-      margin-bottom: 20px;
+    /* Navbar */
+    .navbar {
+      background-color: #0077b5;
+      z-index: 1000;
     }
 
-    .w3-bar .w3-button {
-      color: #fff;
+    .navbar .nav-link {
+      color: white;
     }
 
-    .w3-bar .w3-button:hover {
-      background-color: #005f8c; /* Daha koyu mavi */
+    .navbar .nav-link:hover {
+      color: #dfe6e9;
     }
 
-    /* Makale içeriği */
+    /* Article Section */
     .article-container {
       max-width: 90%;
-      margin: 30px auto;
+      margin: 50px auto;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
@@ -52,7 +52,6 @@
     .article-container p {
       font-size: 16px;
       color: #333;
-      margin: 10px 0;
       text-align: justify;
     }
 
@@ -62,9 +61,6 @@
       color: white;
       text-align: center;
       padding: 20px 10px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
     }
 
     .footer a {
@@ -80,6 +76,12 @@
     .social-links img {
       width: 30px;
       margin: 0 10px;
+    }
+
+    /* Slider */
+    .carousel-item img {
+      height: 400px;
+      object-fit: cover;
     }
 
     @media (max-width: 768px) {
@@ -105,70 +107,91 @@
         margin: 0 5px;
       }
     }
-
-    @media (max-width: 480px) {
-      .article-container {
-        padding: 10px;
-      }
-
-      .article-container h1 {
-        font-size: 18px;
-      }
-
-      .article-container p {
-        font-size: 12px;
-      }
-
-      .social-links img {
-        width: 20px;
-        margin: 0 3px;
-      }
-    }
   </style>
 </head>
-<body class="w3-light-blue">
+<body>
 
-  <!-- Navbar -->
-  <div class="w3-bar w3-large">
-    <a href="index.html" class="w3-bar-item w3-button">Anasayfa</a>
-    <a href="hakkinda.html" class="w3-bar-item w3-button w3-right">Hakkında</a>
-    <a href="iletisim.html" class="w3-bar-item w3-button w3-right">İletişim</a>
-    <a href="article.html" class="w3-bar-item w3-button w3-right">Makale</a>
-  </div>
-
-  <!-- Makale İçeriği -->
-  <div class="article-container">
-    <h1>Bilgi Teknolojileri ve İnternet Güvenliği</h1>
-    <p>Günümüzde bilgi teknolojileri, işletmeler ve bireyler için vazgeçilmez bir araç haline gelmiştir. Ancak, internet üzerinde dolaşan tehditler ve güvenlik sorunları da beraberinde artmıştır. Güçlü şifre kullanımı, güncellenmiş yazılım ve düzenli yedekleme gibi basit güvenlik önlemleri, veri güvenliğini korumak için büyük önem taşır. Ayrıca, siber saldırılarla mücadele etmek için antivirüs programları ve güvenlik duvarları gibi donanım ve yazılımlar kullanılmalıdır.</p>
-    <p>Siber saldırganlar, kişisel bilgilerinizi çalmak, ağınıza zarar vermek veya sisteminizi çökertmek için çeşitli yöntemler kullanabilir. Bu nedenle, hassas bilgileri paylaşmadan önce dikkatli olunmalı ve güvenli ağlarda gezinmeye özen gösterilmelidir. İnternet güvenliği, kullanıcıların bilinçli olmasına ve düzenli olarak güvenlik kontrolleri yapmasına bağlıdır.</p>
-  </div>
-  
-
-  <div class="article-container">
-    <h1>Yapay Zeka ve Uygulama Alanları</h1>
-    <p>Yapay zeka (YZ), makinelerin insan benzeri akıl yürütme ve öğrenme yeteneklerini taklit etmesini sağlayan bir teknoloji olarak son yıllarda büyük bir ilerleme kaydetmiştir. Sağlık sektöründe tanı ve tedavi süreçlerinde, finans alanında müşteri hizmetleri ve risk yönetiminde, otomotiv endüstrisinde sürücü destek sistemlerinde, YZ'nin uygulama alanları her geçen gün genişlemektedir.</p>
-    <p>Örneğin, sağlık sektöründe yapay zeka, tıbbi görüntüleme ve analizlerde doktorların iş yükünü hafifletmekte ve teşhis doğruluğunu artırmaktadır. Finans sektöründe ise YZ, müşteri davranışlarını analiz ederek daha iyi hizmet sunmakta ve dolandırıcılık tespitinde kullanılmaktadır. Otomotivde sürücü destek sistemleri ve otonom araçlar, yapay zeka teknolojisinin en bilinen uygulama alanları arasındadır.</p>
-  </div>
-  
-
-  <div class="article-container">
-    <h1>Yazılım Geliştirme Süreci</h1>
-    <p>Yazılım geliştirme süreci, yazılımın tasarımından, geliştirilmesine ve dağıtımına kadar olan aşamaları kapsar. Bu süreç genellikle analiz, tasarım, uygulama, test ve bakım aşamalarını içerir. Analiz aşamasında, kullanıcının gereksinimleri belirlenir ve yazılımın fonksiyonları ortaya konur. Tasarım aşamasında, yazılımın yapısı ve işleyişi belirlenir, prototipler geliştirilir.</p>
-    <p>Uygulama aşamasında yazılım, belirlenen tasarım doğrultusunda programlanarak hayata geçirilir. Test aşamasında, yazılımın fonksiyonları test edilir, hatalar tespit edilir ve düzeltilir. Son olarak bakım aşamasında, yazılım sürekli olarak güncellenir ve iyileştirilir. Bu süreç, yazılımın hatasız çalışmasını ve kullanıcı beklentilerini karşılamasını sağlar.</p>
-  </div>
-
-  <div class="article-container">
-    <h1>Ağ Yönetimi ve Güvenlik</h1>
-    <p>Ağ yönetimi, bir ağın doğru, verimli ve güvenli bir şekilde çalışmasını sağlamak için gerekli düzenlemeleri ve ayarları içerir. Ağ yöneticileri, ağ trafiğini izler, bant genişliğini yönetir ve sorunları çözmek için sürekli denetim yapar. Güvenlik, ağ yönetiminin en kritik bileşenlerinden biridir. Ağ trafiğinin güvenliğini sağlamak için güvenlik duvarları, VPN'ler, şifreleme protokolleri ve ağ erişim kontrolleri kullanılır.</p>
-    <p>Ayrıca, ağlarda veri sızıntıları ve saldırılara karşı önlemler almak için düzenli güvenlik denetimleri yapılmalıdır. Bu, ağın açıklarını bulmak ve kapatmak için kritik bir adımdır. Doğru ağ yönetimi ve güvenlik önlemleri, ağın kesintisiz ve güvenli çalışmasını sağlar, kullanıcı verilerini korur ve siber tehditlere karşı savunma sağlar.</p>
-  </div>
-  
- <!-- Footer -->
- <div class="footer w3-padding">
-    <p>&copy; 2024 Ali Suntur. Tüm Hakları Saklıdır.</p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-  
-      <a href="https://www.linkedin.com/in/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"></a>
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="https://th.bing.com/th/id/OIG1.6dgH.fMS14_lI8g7tY43?pid=ImgGn" alt="Logo" style="height: 50px;">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+        <li class="nav-item"><a class="nav-link" href="hakkinda.html">Hakkında</a></li>
+        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        <li class="nav-item"><a class="nav-link" href="article.html">Makale</a></li>
+      </ul>
     </div>
   </div>
+</nav>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Makale İçeriği -->
+<div class="article-container">
+  <h1>Bilgi Teknolojileri ve İnternet Güvenliği</h1>
+  <p>Bilgi teknolojileri, günümüzde işletmeler ve bireyler için vazgeçilmez bir araç haline gelmiştir. Bu teknolojiler, veri yönetimi, iletişim ve işlem hızını artırarak birçok alanda verimliliği sağlamaktadır. İnternet güvenliği ise, bu teknolojilerin kullanımı sırasında kişisel ve kurumsal verilerin korunmasını sağlamak için kritik bir öneme sahiptir. Bilgi teknolojileri ile birlikte siber saldırılara karşı önlem almak, verilerin gizliliğini ve bütünlüğünü korumak zorunludur. Gelişmiş şifreleme yöntemleri, ağ güvenlik duvarları, anti-virüs yazılımları ve sürekli güncellenen güvenlik politikaları, bilgi teknolojileri ile çalışan kurum ve bireylerin güvenliğini artırır.</p>
+</div>
+
+<div class="article-container">
+  <h1>Yapay Zeka ve Uygulama Alanları</h1>
+  <p>Yapay zeka (YZ), makinelerin insan benzeri akıl yürütme ve öğrenme yeteneklerini taklit etmesini sağlayan bir teknolojidir. Bu teknoloji, doğal dil işleme, görüntü ve ses tanıma, veri analizleri ve öngörüler gibi birçok alanda kullanılmaktadır. Yapay zeka, sağlık, finans, üretim, eğitim ve pazarlama gibi sektörlerde etkin rol oynamaktadır. Örneğin, sağlık sektöründe hastalık teşhisi ve tedavi önerileri sunarken, üretim sektöründe akıllı robotlarla üretim süreçlerini optimize etmektedir. Aynı zamanda, müşteri hizmetleri alanında, otomatik yanıt sistemleri ile kullanıcı taleplerine hızlı ve doğru bir şekilde yanıt vermektedir. Yapay zeka, verilerin büyük miktarda analiz edilmesi ve işlenmesi gereken durumlarda da büyük bir yardımcıdır.</p>
+</div>
+
+<div class="article-container">
+  <h1>Yazılım Geliştirme Süreci</h1>
+  <p>Yazılım geliştirme süreci, yazılımın tasarımından, geliştirilmesine ve dağıtımına kadar olan tüm aşamaları kapsar. Bu süreç genellikle dört ana aşamadan oluşur: gereksinim analizi, tasarım, kodlama ve test. Gereksinim analizi, kullanıcıların ihtiyaçlarının belirlenmesi ve yazılımın nasıl çalışması gerektiğine dair detayların ortaya konulmasını sağlar. Tasarım aşamasında, yazılımın nasıl çalışacağına dair teknik detaylar ve mimari yapı oluşturulur. Kodlama aşamasında ise yazılım gerçeklenir ve belirlenen tasarım doğrultusunda kodlanır. Test aşaması ise, yazılımın doğru çalışıp çalışmadığını kontrol etmek amacıyla gerçekleştirilir. Yazılım geliştirme sürecinde, hata tespiti ve düzeltme işlemleri de önemlidir. Geliştiriciler, kullanıcı dostu arayüzler ve verimli kodlamalar ile yazılımların performansını artırmayı hedefler.</p>
+</div>
+
+<div class="article-container">
+  <h1>Ağ Yönetimi ve Güvenlik</h1>
+  
+  <p>Ağ yönetimi, bir ağın doğru, verimli ve güvenli bir şekilde çalışmasını sağlamak için gerekli tüm faaliyetleri içerir. Ağ yönetimi süreçleri, ağın yapılandırılması, izlenmesi, yönetilmesi ve optimize edilmesini kapsar. Bu süreçler, ağ donanımlarının kurulumu, ağ performansının izlenmesi, ağ trafik analizleri ve veri güvenliği gibi konuları içerir. Güvenlik ise ağ yönetiminde kritik bir bileşendir. Ağın güvenliği, siber tehditlere karşı önlem almak, veri kaybını önlemek ve ağın bütünlüğünü korumak için önemlidir. Gelişmiş güvenlik önlemleri arasında şifreleme, ağ güvenlik duvarları, sızma testleri ve güvenlik izleme sistemleri bulunur. Ayrıca, ağ yönetiminde kullanıcı yetkilendirmeleri ve erişim kontrol mekanizmaları da ağ güvenliğini artırır.</p>
+</div>
+
+<div class="article-container">
+  <h1>Bulut Bilişim ve Güvenlik</h1>
+  <p>Bulut bilişim, bilgi ve uygulamaların internet üzerinden depolanması ve erişilmesini sağlayan bir hizmettir. Bulut sistemleri, verilerinizi merkezi bir sunucu yerine, internet üzerinden birçok sunucuya yayarak daha güvenli ve esnek bir yapı sunar. Ancak bulut bilişim, veri güvenliği konusunda da bazı zorluklar taşır. Bulut hizmet sağlayıcılarının güvenliği, kullanıcıların veri güvenliğini doğrudan etkiler. Verilerin şifrelenmesi, kullanıcı yetkilendirme ve doğrulama yöntemlerinin yanı sıra, ağ trafiği ve verilerin erişim kontrolü gibi önlemlerle bulut sistemlerinin güvenliği sağlanabilir. Gelişmiş bulut güvenlik teknikleri, siber saldırılara karşı koruma sağlar ve verilerin gizliliğini korur. Kurumlar, bulut bilişim sistemlerine geçmeden önce veri güvenliği politikalarını ve kontratlarını dikkatlice gözden geçirmelidir.</p>
+</div>
+
+<div class="article-container">
+  <h1>Veri Tabanı Yönetimi</h1>
+  <p>Veri tabanı yönetimi, büyük miktarda verinin organize edilmesi, saklanması ve işlenmesini sağlar. Veri tabanı yönetim sistemleri (VTYS), verilerin güvenli ve erişilebilir bir şekilde depolanmasını ve yönetimini kolaylaştırır. Bu sistemler, verilerin düzenlenmesini, sorgulanmasını ve analiz edilmesini sağlar. Veri tabanı yönetimi aynı zamanda, veri bütünlüğünü koruma, yedekleme ve geri yükleme gibi kritik işlevleri de içerir. Verilerinizi belirli bir yapı altında düzenlemek ve veritabanı güvenliğini sağlamak, veri kaybını önlemek ve verilerinizi etkin bir şekilde kullanabilmek için önemlidir. Ayrıca, veri tabanı yönetiminde kullanıcı erişim kontrolleri ve yetkilendirme mekanizmaları da büyük bir rol oynar.</p>
+</div>
+
+<div class="article-container">
+  <h1>Gelişmiş Ağ Güvenliği Teknikleri</h1>
+  <p>Gelişmiş ağ güvenliği teknikleri, ağın potansiyel tehditlere karşı korunmasını sağlamak için kullanılan çeşitli yöntemleri içerir. Bu teknikler arasında ağ güvenlik duvarları, virüs tarama yazılımları, sızma testleri, ağ izleme araçları ve güvenlik izleme sistemleri bulunur. Ağ güvenlik duvarları, ağ trafiğini izleyerek zararlı veri paketlerinin girişini engellerken, virüs tarama yazılımları, ağ üzerinden geçen verileri tarar ve zararlı yazılımların önüne geçer. Sızma testleri, ağın açıklarını tespit ederek potansiyel saldırıların önlenmesine yardımcı olur. Ağ izleme araçları, ağ trafiği ve performansını izleyerek olası tehditleri belirler. Ayrıca, güvenlik izleme sistemleri, ağ trafiğinde anormal etkinlikleri izleyerek hızlı müdahale edilmesini sağlar. Gelişmiş ağ güvenliği teknikleri, ağın bütünlüğünü korur ve kullanıcı verilerini güvende tutar.</p>
+</div>
+
+<div class="article-container">
+  <h1>Mobil Cihazlar ve Güvenlik</h1>
+  <p>Mobil cihazlar, kullanıcıların verilerine erişimini sağlamakla birlikte, güvenlik açıkları taşıyabilir. Mobil cihaz güvenliği, verilerin gizliliğini ve bütünlüğünü korumak için kritik öneme sahiptir. Cihazlar, kullanıcıların kişisel ve iş verilerine erişim sağlar; bu nedenle, cihazın korunması ve güvenliğinin sağlanması gereklidir. Mobil cihaz güvenliğinde, şifreleme, erişim kontrolü ve güvenli uygulama indirme süreçleri büyük bir rol oynar. Şifreleme, cihaz üzerindeki verilerin dışarıdan erişilmesini zorlaştırırken, erişim kontrolü sadece yetkili kullanıcıların cihazlara erişim sağlamasını sağlar. Ayrıca, güvenli uygulama indirme süreçleri, cihazın güvenliğini tehdit edebilecek zararlı yazılımların önüne geçer. Mobil cihazların düzenli olarak güncellenmesi ve antivirüs yazılımları ile korunması da güvenlik açısından önemlidir.</p>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Ali Suntur. Tüm Hakları Saklıdır.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/alisuntur/">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/alisuntur/">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

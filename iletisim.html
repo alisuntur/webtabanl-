@@ -4,136 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>İletişim</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Genel stil ayarları */
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #e6f7ff; /* Daha canlı ve soft bir arka plan rengi */
-      margin: 0;
-      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f7f9fc;
     }
 
-    /* Navbar ayarları */
-    .w3-bar {
-      background-color: #0077b5; /* LinkedIn mavisi */
-      margin-bottom: 20px;
+    .navbar {
+      background-color: #0077b5;
     }
 
-    .w3-bar .w3-button {
-      color: #fff;
+    .navbar .nav-link {
+      color: white;
     }
 
-    .w3-bar .w3-button:hover {
-      background-color: #005f8c; /* Daha koyu mavi */
+    .navbar .nav-link:hover {
+      color: #dfe6e9;
     }
 
-    /* İletişim içeriği */
     .contact-container {
-      display: flex; /* Flexbox ile yatay olarak iki alana bölme */
-      justify-content: space-between; /* İçeriği yatay olarak ayır */
-      padding: 30px;
-      max-width: 900px;
-      margin: 0 auto; /* Sayfada merkezi konumlandırma */
+      max-width: 90%;
+      margin: 100px auto 50px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .contact-info {
-      max-width: 450px; /* Maksimum genişlik ayarı */
-      background-color: #fff; /* Beyaz arka plan */
+      flex: 1;
+      background-color: #fff;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .contact-info h2 {
-      font-size: 24px;
       color: #0077b5;
     }
 
     .contact-info p {
-      font-size: 18px;
-      color: #333;
+      font-size: 16px;
       margin: 10px 0;
     }
 
-    /* Harita */
+    .contact-info a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #fff;
+      background-color: #0077b5;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      background-color: #005f8c;
+    }
+
     .map-container {
-      max-width: 450px;
-      height: 400px;
+      flex: 2;
       border-radius: 8px;
-      overflow: hidden; /* İfadenin dışına taşmasını önler */
+      overflow: hidden;
     }
 
     .map-container iframe {
       width: 100%;
       height: 100%;
-      border: none;
+      border: 0;
     }
 
-    /* Alt Bilgi */
-    .footer {
+    footer {
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 20px 0;
-      position: relative;
-      bottom: 0;
-      width: 100%;
+      padding: 20px;
     }
 
-    .footer a {
+    footer a {
       color: #ffd966;
       text-decoration: none;
       margin: 0 10px;
     }
 
-    .footer a:hover {
+    footer a:hover {
       text-decoration: underline;
     }
 
-    .social-links img {
+    footer .social-links img {
       width: 30px;
       margin: 0 10px;
     }
   </style>
 </head>
-<body class="w3-light-blue">
+<body>
 
-   <!-- Navbar -->
-   <div class="w3-bar w3-large">
-    <a href="index.html" class="w3-bar-item w3-button">Anasayfa</a>
-    <a href="hakkinda.html" class="w3-bar-item w3-button w3-right">Hakkında</a>
-    <a href="iletisim.html" class="w3-bar-item w3-button w3-right">İletişim</a>
-    <a href="article.html" class="w3-bar-item w3-button w3-right">Makale</a>
-  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://th.bing.com/th/id/OIG1.6dgH.fMS14_lI8g7tY43?pid=ImgGn" alt="Logo" style="height: 50px;">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="hakkinda.html">Hakkında</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="article.html">Makale</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- İletişim İçeriği -->
-  <div class="w3-container contact-container">
+  <div class="contact-container">
     <div class="contact-info">
       <h2>İletişim Bilgileri</h2>
       <p><strong>Adres:</strong> Pamukkale Üniversitesi İİBF B BLOK</p>
       <p><strong>Telefon:</strong> +90 555 123 4567</p>
       <p><strong>E-posta:</strong> info@blogum.com</p>
       <p><strong>Çalışma Saatleri:</strong> Pazartesi - Cuma, 09:00 - 18:00</p>
-      <!-- Buton Ekleme -->
-      <a href="https://forms.gle/sK53CEYaGZFyety46" target="_blank" class="w3-button w3-blue w3-margin-top">Bana Mesaj Gönder</a>
+      
     </div>
-
-    <!-- Harita -->
     <div class="map-container">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.133829060392!2d29.102457726411767!3d37.740004464161295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c64cd2bfffffff%3A0x7c21102ab89254ac!2sPamukkale%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1733228061440!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
- <!-- Footer -->
- <div class="footer w3-padding">
-  <p>&copy; 2024 Ali Suntur. Tüm Hakları Saklıdır.</p>
-  <div class="social-links">
-    <a href="https://www.instagram.com/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Ali Suntur. Tüm Hakları Saklıdır.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"></a>
+    </div>
+  </footer>
 
-    <a href="https://www.linkedin.com/in/alisuntur/"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"></a>
-  </div>
-</div>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
